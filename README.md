@@ -6,7 +6,7 @@ call ruby method(in module or class method) in jruby script from clojure
 
 jruby script
 
-```
+```ruby
 module Plugin
   extend self
 
@@ -26,7 +26,7 @@ end
 
 in clojure
 
-```
+```clojure
 (use 'cljruby.core)
 (def add_some (fn [x y] (to-clj-obj (call-module-method (slurp "/path/to/xxx.rb") "Plugin" "add_some" x y))))
 (add_some 10 23) ;; => 33
